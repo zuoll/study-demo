@@ -264,19 +264,19 @@ public class RatelimitAspect {
 
 #### 运行结果
 
-![Image text](https://raw.githubusercontent.com/zuoll/md-image/main/20201204181819.png?token=AE5HD755UN4GWSOJ4PAWADS7ZIIAW)
+![Image text](https://raw.githubusercontent.com/zuoll/md-image/main/20201204181819.png?token=AE5HD7ZKP7OXBN5RVLQWC3K7ZIKBI)
 
 
 * 相关文章
 
-####上传图片到github 仓库访问地址，访问不到问题
+####   上传图片到github 仓库访问地址，访问不到问题
 * 修改windows (C:\Windows\System32\drivers\etc\hosts)打开后在最后添加
 ```$xslt
 # GitHub raw & imag
 199.232.28.133 raw.githubusercontent.com
 https://blog.csdn.net/zlk999/article/details/107006050/
 ```
-####github创建md 图片仓库
+####  github创建md 图片仓库
 ```$xslt
 https://www.cnblogs.com/hongmaju/p/6873720.html
 4、在README.md中填入：
