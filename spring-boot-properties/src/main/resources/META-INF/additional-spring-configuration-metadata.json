@@ -1,0 +1,34 @@
+{
+  "properties": [
+    {
+      "name": "develop.qq",
+      "type": "java.lang.String",
+      "description": "developer qq.",
+      "defaultValue": ""
+    },
+    {
+      "name": "develop.name",
+      "type": "java.lang.String",
+      "description": "developer name.",
+      "defaultValue": ""
+    },
+    {
+      "name": "demo.app-name",
+      "type": "java.lang.String",
+      "description": "application name.",
+      "defaultValue": ""
+    },
+    {
+      "name": "demo.app-desc",
+      "type": "java.lang.String",
+      "description": "application description.",
+      "defaultValue": ""
+    },
+    {
+      "name": "demo.app-version",
+      "type": "java.lang.String",
+      "description": "application version.",
+      "defaultValue": ""
+    }
+  ]
+}

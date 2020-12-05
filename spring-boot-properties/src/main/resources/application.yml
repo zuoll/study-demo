@@ -1,0 +1,26 @@
+server:
+  port: 6789
+  servlet:
+    context-path: /prop
+
+
+#develop:
+#  name:
+#    - zll
+#    - zll2
+#  qq:
+#    - 1498742107@qq.com
+#    - 1498742108@qq.com
+develop:
+  name:
+    - zll1
+    - zll2
+    - zll3
+  qq:
+    - 1498742107@qq.com
+    - 1498742108@qq.com
+    - 1498742109@qq.com
+
+demo:
+  app-desc: this is prop test project
+  app-name: prop app
