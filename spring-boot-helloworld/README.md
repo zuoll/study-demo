@@ -121,3 +121,11 @@ server:
 
 ##### 运行结果
 ![image-text](https://zll-images-1254006866.cos.ap-guangzhou.myqcloud.com/20201205102656.png)
+
+
+##### 一个小功能
+* git 提交emoji表情的方法
+```
+https://github.com/Kimi-Gao/Program-Blog/issues/71
+
+```
