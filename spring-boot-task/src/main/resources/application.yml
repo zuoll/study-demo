@@ -1,0 +1,9 @@
+
+#TaskSchedulingProperties.java
+spring:
+  task:
+    scheduling:
+      pool:
+        size: 10
+      thread-name-prefix: task-demo-
+
