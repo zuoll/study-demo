@@ -192,7 +192,7 @@ public class BaseException extends RuntimeException {
 ```
 
 
-##### 启动类**GlobalExApplication.java**
+##### 启动类`GlobalExApplication.java`
 ```java
 package com.zll.ex;
 
@@ -221,7 +221,7 @@ public class GlobalExApplication {
 
 
     /**
-     * 返回一个同一个json 错误
+     * 返回一个json 错误
      *
      * @return
      */
@@ -233,6 +233,7 @@ public class GlobalExApplication {
 
 
     /**
+    * 返回一个正常的json 数据
      * @return
      */
     @RequestMapping("/json-ok")
@@ -243,7 +244,7 @@ public class GlobalExApplication {
 
 
     /**
-     * 返回一个同一个错误页面 error.html
+     * 返回一个错误页面 error.html
      *
      * @return
      */
