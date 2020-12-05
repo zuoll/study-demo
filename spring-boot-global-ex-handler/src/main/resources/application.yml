@@ -1,0 +1,21 @@
+server:
+  servlet:
+    context-path: /global-ex
+  port: 9999
+
+
+#  ThymeleafProperties
+spring:
+  thymeleaf:
+    #    这个是默认路径，可以不写
+    prefix: classpath:/templates/
+
+    #开发时页面不需要缓存
+    cache: false
+    #这些配置都是默认的，
+    mode: HTML
+    encoding: utf-8
+    servlet:
+      content-type: text/html
+
+
