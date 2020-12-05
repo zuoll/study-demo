@@ -1,7 +1,12 @@
 ### 使用redis+lua 脚本实现限流,旨在保护API 被恶意的频繁访问
+#### 打包，进入到项目根目录下，和pom文件同一级别
+```sh
+mvn clean package -DskipTests
+
+```
 
 #### pom
-```$xslt
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -82,7 +87,7 @@
 ```
 
 #### 注解
-```$xslt
+```java
 
 package com.zll.ratelimit.annotation;
 
@@ -150,7 +155,7 @@ public @interface RateLimiter {
 
 
 ####
-```$xslt
+```java
 package com.zll.ratelimit;
 
 import cn.hutool.core.util.StrUtil;
