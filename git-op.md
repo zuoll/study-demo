@@ -26,7 +26,7 @@ git remote add  https://github.com/zuoll/study-demo.git
 ```
 
 
-### 6，降本地仓库上传到远程的仓库，刷新github 仓库，既可以看到上传成功
+### 6，将本地仓库上传到远程的仓库，刷新github 仓库，既可以看到上传成功
 
 *  (不加这句可能报错出现错误的主要原因是github中的README.md文件不在本地代码目录中)
 ```$xslt
