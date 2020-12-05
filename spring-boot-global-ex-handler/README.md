@@ -280,7 +280,7 @@ server:
   port: 9999
 
 
-#  ThymeleafProperties
+#  ThymeleafProperties.java
 spring:
   thymeleaf:
     #    这个是默认路径，可以不写
