@@ -25,7 +25,7 @@ public class GlobalExApplication {
 
 
     /**
-     * 返回一个同一个json 错误
+     * 返回一个统一json 错误
      *
      * @return
      */
@@ -37,6 +37,8 @@ public class GlobalExApplication {
 
 
     /**
+     * 返回一个正常的json数据
+     *
      * @return
      */
     @RequestMapping("/json-ok")
@@ -47,7 +49,7 @@ public class GlobalExApplication {
 
 
     /**
-     * 返回一个同一个错误页面 error.html
+     * 返回一个统一错误页面 error.html
      *
      * @return
      */
@@ -58,7 +60,7 @@ public class GlobalExApplication {
 
 
     /**
-     * 返回一个正常的hello.html
+     * 返回一个正常的hello.html页面
      *
      * @return
      */

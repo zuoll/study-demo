@@ -1,4 +1,4 @@
-######  spring 统一的异常处理，有两种，第1， 抛异常返回统一的格式，第2， 如果是页面 ，跳到统一的异常页面
+### spring 统一的异常处理，有两种，第1， 抛异常返回统一的格式，第2， 如果是页面 ，跳到统一的异常页面
 
 ###### pom.xml
 ```xml
@@ -77,7 +77,7 @@
 </project>
 ```
 
-##### 全局的异常处理器类 **GlobalExceptionHandler.java**
+##### 全局的异常处理器类 `GlobalExceptionHandler.java`
 
 ```java
 package com.zll.ex;
@@ -156,7 +156,7 @@ public class GlobalExApplication {
 
 ```
 
-##### 异常类**BaseException.java** **PageException.java** **JsonException.java**
+##### 异常类`BaseException.java` `PageException.java` `JsonException.java`
 ```java
 package com.zll.ex.exception;
 
@@ -267,5 +267,30 @@ public class GlobalExApplication {
         return modelAndView;
     }
 }
+
+```
+
+##### 配置文件
+```yml
+
+server:
+  servlet:
+    context-path: /global-ex
+  port: 9999
+
+
+#  ThymeleafProperties
+spring:
+  thymeleaf:
+    #    这个是默认路径，可以不写
+    prefix: classpath:/templates/
+
+    #开发时页面不需要缓存
+    cache: false
+    #这些配置都是默认的，
+    mode: HTML
+    encoding: utf-8
+    servlet:
+      content-type: text/html
 
 ```
