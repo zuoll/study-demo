@@ -1,0 +1,16 @@
+spring:
+  task:
+    execution:
+      pool:
+        #        是否允许超时
+        allow-core-thread-timeout: true
+        #        核心线程数
+        core-size: 8
+        #        任务队列大小
+        queue-capacity: 100
+        #        线程存活时间
+        keep-alive: 10s
+        #        最大线程数
+        max-size: 16
+      #线程的前缀
+      thread-name-prefix: async-task-
