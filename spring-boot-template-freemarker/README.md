@@ -1,4 +1,4 @@
-##### spring boot 继承freemarker 演示
+### spring boot 集成 freemarker 演示
 
 
 ##### pom.xml
