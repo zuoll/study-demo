@@ -1,0 +1,15 @@
+server:
+  port: 9999
+  servlet:
+    context-path: /freemarker
+
+
+#    FreeMarkerProperties.java
+#    这些都是默认的配置，
+spring:
+  freemarker:
+    cache: false
+    charset: utf-8
+    suffix: .ftl
+    enabled: true
+

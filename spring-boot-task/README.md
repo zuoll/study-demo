@@ -25,7 +25,7 @@ spring:
 
 #### `java 的配置方式`
 ```java
-package com.zll.task;
+package com.zll.async.task;
 
 import org.apache.commons.lang3.concurrent.BasicThreadFactory;
 import org.springframework.boot.autoconfigure.task.TaskSchedulingProperties;
@@ -45,7 +45,7 @@ import java.util.concurrent.ScheduledThreadPoolExecutor;
 
 @EnableScheduling 
 @Configuration
-@ComponentScan(basePackages = "com.zll.task.job")
+@ComponentScan(basePackages = "com.zll.async.task.job")
 public class TaskConfig implements SchedulingConfigurer {
 
 
@@ -84,7 +84,7 @@ public class TaskConfig implements SchedulingConfigurer {
 
 #### 几种常见的定器
 ```java
-package com.zll.task.job;
+package com.zll.async.task.job;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.scheduling.annotation.Scheduled;
@@ -130,7 +130,7 @@ public class TaskJob {
 
 #### 结果测试
 ```java
-package com.zll.task;
+package com.zll.async.task;
 
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Before;

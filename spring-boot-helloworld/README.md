@@ -18,7 +18,7 @@ mvn clean package -DskipTests
     <modelVersion>4.0.0</modelVersion>
 
 
-    <groupId>spring-boot-demo-ratelimit-redis</groupId>
+    <groupId>com.zll.study</groupId>
     <artifactId>spring-boot-helloworld</artifactId>
     <packaging>jar</packaging>
     <version>1.0-SNAPSHOT</version>

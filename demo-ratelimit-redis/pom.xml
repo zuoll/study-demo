@@ -5,22 +5,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.zll.study</groupId>
-    <artifactId>study-demo</artifactId>
-    <packaging>pom</packaging>
+    <artifactId>ratelimit-demo</artifactId>
+    <packaging>jar</packaging>
     <version>1.0-SNAPSHOT</version>
-
-    <description>study-demo parent pom</description>
-
-    <modules>
-        <module>spring-boot-helloworld</module>
-        <module>spring-boot-properties</module>
-        <module>spring-boot-global-ex-handler</module>
-        <module>spring-boot-task</module>
-        <module>spring-boot-async</module>
-        <module>spring-boot-task-quartz</module>
-        <module>spring-boot-template-freemarker</module>
-        <module>demo-ratelimit-redis</module>
-    </modules>
+    <description>redis + lua 限流 demo</description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -39,18 +27,35 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
+
+        <!-- 对象池，使用redis时必须引入 -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-pool2</artifactId>
+        </dependency>
+
         <dependency>
             <groupId>cn.hutool</groupId>
             <artifactId>hutool-all</artifactId>
             <version>5.1.2</version>
         </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
 
-        <!--IDEA 要安装lombok 插件-->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
