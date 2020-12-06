@@ -1,0 +1,32 @@
+server:
+  servlet:
+    context-path: /share-session
+  port: 9999
+
+
+
+# 开启spring session 的redis 管理
+spring:
+  session:
+    redis:
+      namespace: spring:session
+
+    store-type: redis
+    hazelcast:
+      flush-mode: immediate
+
+
+  redis:
+    host: localhost
+    port: 6379
+#    连接的超时时间 记得要有单位
+    timeout: 10000ms
+
+#    redis 连接池的配置
+    lettuce:
+      pool:
+        max-active: 8
+        max-wait: -1ms
+        max-idle: 8
+        min-idle: 0
+
