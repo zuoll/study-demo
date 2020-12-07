@@ -8,21 +8,26 @@ server:
 # 开启spring session 的redis 管理
 spring:
   session:
+    store-type: redis
     redis:
       namespace: spring:session
-
-    store-type: redis
-    hazelcast:
       flush-mode: immediate
+#    public enum RedisFlushMode {
+#    ON_SAVE,
+#    IMMEDIATE;
+#
+#    private RedisFlushMode() {
+#  }
+#}
 
 
   redis:
     host: localhost
     port: 6379
-#    连接的超时时间 记得要有单位
+#    连接的超时时间 记得要有单位Duration
     timeout: 10000ms
 
-#    redis 连接池的配置
+#    redis 连接池lettuce的配置
     lettuce:
       pool:
         max-active: 8

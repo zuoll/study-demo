@@ -20,11 +20,14 @@ public class WebMvcConfig implements WebMvcConfigurer {
         InterceptorRegistration interceptor = registry.addInterceptor(sessionInterceptor);
 
         //放行不需要拦截的
-        interceptor.excludePathPatterns("/page/login");
-        interceptor.excludePathPatterns("/page/doLogin");
+        //登录页面是要放行的，不然别人怎么登录
+        interceptor.excludePathPatterns("/login/login-page");
+        interceptor.excludePathPatterns("/login/doLogin");
+
+        //默认的错误页面也不需要拦截
         interceptor.excludePathPatterns("/error");
 
-        //其他的全部拦截
+        //本项目的其他路径全部拦截
         interceptor.addPathPatterns("/**");
     }
 }
