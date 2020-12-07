@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<header th:replace="~{common/head :: header}"></header>
+<body>
+<div id="app" style="margin: 20px 20%">
+    欢迎登录，<span th:text="${user.username}"></span>！
+    <br>
+    <img th:src="@{/static/img/dog.jpeg}" alt="dog" style="with: 100px;height: 100px">
+</div>
+</body>
+
+
+<script th:src="@{/static/js/jquery.min.js}"></script>
+<script>
+    $(function () {
+        alert($);
+    })
+</script>
+</html>

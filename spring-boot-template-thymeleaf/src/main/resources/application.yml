@@ -1,0 +1,30 @@
+server:
+  port: 9999
+  servlet:
+    context-path: /thymeleaf-demo
+
+
+
+# thymeleaf 的一般配置
+# ThymeleafProperties.java
+
+#classpath:/templates/
+spring:
+  thymeleaf:
+    encoding: UTF-8
+    cache: false
+    mode: HTML
+    servlet:
+      content-type: text/html
+
+
+
+
+      # spring mvc 的静态资源路径放行
+      # WebMvcProperties.java
+      #  等价
+      #  //静态的资源放行
+      #        interceptor.excludePathPatterns("/static/**");
+#  mvc:
+#    static-path-pattern: /static/**
+
