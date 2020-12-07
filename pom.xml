@@ -11,17 +11,11 @@
 
     <description>study-demo parent pom</description>
 
-    <modules>
-        <module>spring-boot-helloworld</module>
-        <module>spring-boot-properties</module>
-        <module>spring-boot-global-ex-handler</module>
-        <module>spring-boot-task</module>
-        <module>spring-boot-async</module>
-        <module>spring-boot-task-quartz</module>
-        <module>spring-boot-template-freemarker</module>
-        <module>demo-ratelimit-redis</module>
-        <module>spring-boot-share-session</module>
-    </modules>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+    </properties>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -29,11 +23,19 @@
         <version>2.1.1.RELEASE</version>
     </parent>
 
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <java.version>1.8</java.version>
-    </properties>
+    <modules>
+        <module>spring-boot-helloworld</module>
+        <module>spring-boot-template-freemarker</module>
+        <module>spring-boot-properties</module>
+        <module>spring-boot-global-ex-handler</module>
+        <module>spring-boot-async</module>
+        <module>spring-boot-task</module>
+        <module>spring-boot-task-quartz</module>
+        <module>spring-boot-task-xxljob</module>
+        <module>demo-ratelimit-redis</module>
+        <module>spring-boot-share-session</module>
+    </modules>
+
 
     <dependencies>
         <dependency>
@@ -50,7 +52,6 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-
         <!--IDEA 要安装lombok 插件-->
         <dependency>
             <groupId>org.projectlombok</groupId>
