@@ -1,0 +1,63 @@
+server:
+  servlet:
+    context-path: /mybatis-demo
+  port: 9999
+
+
+# https://www.jianshu.com/p/c414d36450f4
+# hikari 连接池配置
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/springboot-mybatis?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.zaxxer.hikari.HikariDataSource
+
+    #   开发用 start
+    #    initialization-mode: always
+    #    continue-on-error: true
+    #    schema:
+    #      - "classpath*:db/schema.sql"
+    #    data:
+    #      - "classpath*:db/data.sql"
+    #
+    #    #   开发用 end
+
+    hikari:
+      minimum-idle: 5
+      connection-test-query: SELECT 1 FROM DUAL
+      maximum-pool-size: 20
+      #      是否自动提交
+      auto-commit: true
+      #      超时30s
+      idle-timeout: 30000
+      pool-name: SpringBootDemoHikariCP
+      #      60s
+      max-lifetime: 60000
+      #      连接超时30s
+      connection-timeout: 30000
+
+
+# 日志级别 按照包名
+logging:
+  level:
+    com.zll.mybatis.mapper: trace
+    #    打印执行的sql
+    com.zll: debug
+
+
+
+#mybatis 相关配置
+
+
+mybatis:
+  configuration:
+    #    表的字段到java 实体的映射 下划线转为驼峰
+    map-underscore-to-camel-case: true
+  # 指定sql映射文件位置(mybatis 扫描xml文件路径)
+  mapper-locations:
+    - classpath*:mappers/*/**.xml
+    - classpath*:mappers/**.xml
+  #    有这个查询字段和实体就不需要别名 as 做转化了（下划线转为驼峰或者驼峰转为下划线）
+  type-aliases-package: com.zll.mybatis.entity
