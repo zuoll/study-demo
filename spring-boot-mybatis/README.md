@@ -155,6 +155,31 @@ public interface UserMapper {
 
 ```
 
+#### resource/mapper/user/UserMapper.xml
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--dao 的路径-->
+<mapper namespace="com.zll.mybatis.mapper.user.UserMapper">
+
+    <!--方法标注了@Param 就可以不需要指定属性类型parameterType=""-->
+    <!--keyProperty="id" keyColumn="id" useGeneratedKeys="true" 可以返回mysql插入自动生成的主键-->
+    <insert id="saveUser" keyProperty="id" keyColumn="id" useGeneratedKeys="true" parameterType="User">
+        INSERT INTO `ty_user` (`name`,`age`,`phone_number`,`create_time`,`update_time`)
+        VALUES (#{name}, #{age},#{phoneNumber}, now(), now())
+    </insert>
+
+    <delete id="deleteById">
+        DELETE
+        FROM `ty_user`
+        WHERE `id` = #{id}
+    </delete>
+
+</mapper>
+
+```
+
 #### 运行结果
 ![image-text](https://zll-images-1254006866.cos.ap-guangzhou.myqcloud.com/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20201207172202.png)
 
