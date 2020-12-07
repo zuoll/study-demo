@@ -34,6 +34,7 @@
         <module>spring-boot-task-xxljob</module>
         <module>demo-ratelimit-redis</module>
         <module>spring-boot-share-session</module>
+        <module>spring-boot-template-thymeleaf</module>
     </modules>
 
 
