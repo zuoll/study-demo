@@ -52,11 +52,22 @@ public class JdbcTemplateDemoApplicationTest {
     }
 
     @Test
-    public void testFindList(){
+    public void testFindList() {
         User user = new User();
         user.setAge(25);
         List<User> listByExample = userDao.findListByExample(user);
         System.out.println(listByExample);
+    }
+
+    @Test
+    public void testUpdate2() {
+        User user = new User();
+        user.setId(3L);
+        user.setAge(60);
+        user.setPhoneNumber("1008611");
+        user.setName("wangnima100");
+        Integer ret = userDao.updateById(user);
+        System.out.println(ret);
     }
 
 }

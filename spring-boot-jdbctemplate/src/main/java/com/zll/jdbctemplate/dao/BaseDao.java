@@ -165,12 +165,23 @@ public abstract class BaseDao<T, P> {
     }
 
 
-//    protected Integer updateById(T t) {
-//        Object id = ReflectUtil.getFieldValue(t, "id");
-//        if (Objects.isNull(id))
-//            throw new RuntimeException("id is null");
-//        return this.updateById(t, id, true);
-//    }
+    /**
+     * @param t
+     * @return
+     */
+    public Integer updateById(T t) {
+        Object id = ReflectUtil.getFieldValue(t, "id");
+        if (Objects.isNull(id))
+            throw new RuntimeException("id is null");
+
+        Class<?> clz = id.getClass();
+        if (clz == clz2) {
+            P pk = (P) id;
+            return this.updateById(t, pk, true);
+        }
+
+        throw new RuntimeException("cast type error");
+    }
 
 
     /**
