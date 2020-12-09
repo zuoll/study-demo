@@ -1,0 +1,6 @@
+
+#这个在外部的tomcat 下运行时不生效的
+server:
+  port: 9999
+  servlet:
+    context-path: /war
