@@ -1,4 +1,4 @@
-## 本 demo 主要演示了如何将 Spring Boot 项目打包成传统的 war 包程序。(传统的方式)
+## 本 demo 主要演示了如何将 Spring Boot 项目打包成传统的 war 包程序。(传统的方式jsp页面时代)
 
 > 开发的时候和嵌入式tomcat启动一样，部署是外部的tomcat 
 #### pom.xml
@@ -33,7 +33,7 @@
 </project>
 ```
 
-#### 启动类
+#### 启动类 `WarDemoApplication.java`
 ```java
 package com.zll.war;
 
@@ -91,7 +91,7 @@ public class WarDemoApplication extends SpringBootServletInitializer {
 
 ```
 
-#### 配置文件
+#### 配置文件 `application.yml`
 ```yaml
 
 #这个在外部的tomcat 下运行时不生效的, 本地spring boot 侵入式启动才有效
@@ -111,4 +111,4 @@ server:
 
 #### war 和 侵入式tomcat jar 的区别
 ![image-text](https://zll-images-1254006866.cos.ap-guangzhou.myqcloud.com/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20201209101331.png)
-![image-text](http://https://zll-images-1254006866.cos.ap-guangzhou.myqcloud.com/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20201207104018.png)
+![image-text](https://zll-images-1254006866.cos.ap-guangzhou.myqcloud.com/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20201207104018.png)
