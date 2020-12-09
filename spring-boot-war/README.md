@@ -111,4 +111,3 @@ server:
 
 #### war 和 侵入式tomcat jar 的区别
 ![image-text](https://zll-images-1254006866.cos.ap-guangzhou.myqcloud.com/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20201209101331.png)
-![image-text](https://zll-images-1254006866.cos.ap-guangzhou.myqcloud.com/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20201207104018.png)
