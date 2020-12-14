@@ -1,0 +1,6 @@
+server:
+  servlet:
+    context-path: /ws-demo
+  port: 8888
+
+
