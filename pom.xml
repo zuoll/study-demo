@@ -37,6 +37,15 @@
         <module>spring-boot-template-thymeleaf</module>
         <module>spring-boot-mybatis</module>
         <module>spring-boot-pay</module>
+        <module>spring-boot-jpa</module>
+        <module>spring-boot-jdbctemplate</module>
+        <module>spring-boot-war</module>
+        <module>spring-boot-rbac-shiro</module>
+        <module>spring-boot-rbac-springsecurity</module>
+        <module>spring-boot-websocket</module>
+        <module>sample</module>
+        <module>spring-boot-sharding-jdbc</module>
+        <module>spring-security-jwt</module>
     </modules>
 
 

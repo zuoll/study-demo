@@ -9,12 +9,8 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>sample</artifactId>
-    <packaging>pom</packaging>
+    <artifactId>spring-boot-sharding-jdbc</artifactId>
 
-    <modules>
-        <module>jwt-sample</module>
-        <module>oauth-sample</module>
-    </modules>
+
 
 </project>

@@ -1,0 +1,41 @@
+server:
+  port: 9999
+  servlet:
+    context-path: /jpa
+
+logging:
+  level:
+    com.zll.jpa: debug
+    org.hibernate.SQL: debug
+    org.hibernate.type: trace
+
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/jpa?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      pool-name: SpringBootDemoHikariCP
+      connection-timeout: 30000
+      connection-test-query: SELECT 1 FROM DUAL
+      idle-timeout: 30000
+      minimum-idle: 5
+      max-lifetime: 60000
+      maximum-pool-size: 20
+      auto-commit: true
+
+    jpa:
+      database-platform: org.hibernate.dialect.MySQLDialect
+      generate-ddl: true
+      show-sql: true
+      hibernate:
+        ddl-auto: update
+
+
+test:
+  userId: "${test.age}:${random.uuid}:${test.userName}"
+  userName: zs
+  age: ${random.int(1,80)}
